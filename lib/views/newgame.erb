@@ -1,0 +1,10 @@
+<% if @name %>
+  <p>Hello <%= @name %>! Please choose rock, paper or scissors</p>
+<% else %>
+<form action="/newgame">
+<p>Hey! Hey! Hey! What's your name?</p>
+
+<input type="text" name="name">
+<input type="submit" class="submit_name" value="submit">
+</form>
+<% end %>

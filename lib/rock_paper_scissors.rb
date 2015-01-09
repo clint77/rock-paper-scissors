@@ -1,15 +1,16 @@
 require 'sinatra/base'
 
 class RockPaperScissors < Sinatra::Base
-  # set :views, Proc.new { File.join(root, "..", "/views") }
+  # set :views, Proc.new { File.join(root, "..", "views") }
 
   get '/' do
-    "HelloWorld"
+    "Hello RockPaperScissors"
     erb :index
   end
 
   get '/newgame' do
-    "Hey! Hey! Hey! What's your name?"
+    @name = params[:name]
+    erb :newgame
   end
 
   # start the server if ruby file executed directly
