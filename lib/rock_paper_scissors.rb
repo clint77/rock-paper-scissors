@@ -10,12 +10,21 @@ class RockPaperScissors < Sinatra::Base
 
   get '/newgame' do
     @name = params[:name]
-    @choice = params[:choice]
     erb :newgame
   end
 
   get '/playerchoice' do
+    @choice = params[:choice]
     erb :playerchoice
+  end
+
+  get '/winner' do
+    @choice = params[:choice]
+    erb :winner
+  end
+
+  post '/winner' do
+    redirect to('/endgame')
   end
 
   # start the server if ruby file executed directly

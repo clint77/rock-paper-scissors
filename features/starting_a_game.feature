@@ -17,4 +17,10 @@ Feature: Starting a game
   Scenario: Player chooses rock
     Given I am on the playerchoice page
     When I choose "rock" within "choice"
-    Then I should see "You chose, rock!"
+    And I press "submit"
+    Then I should be on the winner page
+
+  Scenario: Computer chooses scissors and player wins
+    Given I am on the winner page
+    Then I should see "You chose, rock! Computer chooses scissors! You win!"
+ 
