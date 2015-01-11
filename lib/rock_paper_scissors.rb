@@ -10,7 +10,12 @@ class RockPaperScissors < Sinatra::Base
 
   get '/newgame' do
     @name = params[:name]
+    @choice = params[:choice]
     erb :newgame
+  end
+
+  get '/playerchoice' do
+    erb :playerchoice
   end
 
   # start the server if ruby file executed directly

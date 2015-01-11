@@ -1,0 +1,11 @@
+<p>You chose, rock!</p>
+
+<input type="radio" id="rock" name="choice" value="rock">rock<br>
+  <input type="radio" id="paper" name="choice" value="paper">paper<br>
+  <input type="radio" id="scissors" name="choice" value="scissors">scissors
+  <input type="hidden" name="name" value="<%= params[:name] %>">
+  <input type="submit" value="submit"
+
+<% if (@name && !@name.empty?) && (@choice == "rock" && !@choice.empty?) %>
+<p>You chose, rock!</p>
+<% end %>
