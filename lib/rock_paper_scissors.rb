@@ -1,6 +1,9 @@
 require 'sinatra/base'
 
 class RockPaperScissors < Sinatra::Base
+  set :public_dir, Proc.new{File.join(root, '..', "public")}
+  set :public_folder, 'public'
+  
   # set :views, Proc.new { File.join(root, "..", "views") }
 
   get '/' do
